@@ -1,0 +1,48 @@
+/* Custom checkbox */
+
+.custom-checkbox {
+  --tf-checkbox-custom-color: #1a94ff;
+  --background-selection-default: #f5f5fa;
+  --border-selection-default: #dddde3;
+  --background-selection-disable: #c4c4cf;
+  --border-selection-disable: #ebebf0;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  background-color: var(--background-selection-default);
+  border: 1px solid;
+  border-color: var(--border-selection-default);
+  border-radius: 4px;
+}
+
+.custom-checkbox.custom-checkbox--checked {
+  background-color: var(--tf-checkbox-custom-color);
+  border-color: var(--tf-checkbox-custom-color);
+}
+
+.custom-checkbox.custom-checkbox--checked.custom-checkbox--disabled {
+  background-color: var(--background-selection-disable);
+}
+
+.custom-checkbox.custom-checkbox--disabled {
+  background-color: var(--background-selection-default);
+  border-color: var(--border-selection-disable);
+}
+
+.custom-checkbox.custom-checkbox--disabled:hover {
+  border-color: none;
+}
+
+.custom-checkbox .t-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-checkbox .t-icon .success-icon {
+  width: 16px;
+  height: 16px;
+}

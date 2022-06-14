@@ -1,0 +1,38 @@
+{
+  "name": "@tiki-miniapp-rez/tini-ui",
+  "version": "1.0.6",
+  "files": [
+    "es"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rm -rf es",
+    "dev": "npm clean && node scripts/complier.js",
+    "build": "npm clean && NODE_ENV=production node scripts/complier.js",
+    "pub": "npm build && npm publish",
+    "publish-code": "git push origin +master:master",
+    "pub:patch": "npm build && git add . && npm version patch -m 'Bump up package with version %s' -f && npm publish && npm run publish-code",
+    "pub:minor": "npm build && git add . && npm version minor -m 'Bump up package with version %s' -f && npm publish && npm run publish-code"
+  },
+  "author": "chanhchung",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanhchung-tiki/rez-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chanhchung-tiki/rez-ui/issues"
+  },
+  "homepage": "https://github.com/chanhchung-tiki/rez-ui#readme",
+  "description": ""
+}
