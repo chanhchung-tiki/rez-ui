@@ -7,7 +7,7 @@
  */
 Component({
   props: {
-    checked: false,
+    checked: true,
     disabled: false,
     onChange: () => {},
   },
