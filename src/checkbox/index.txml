@@ -1,0 +1,7 @@
+<view
+  class="custom-checkbox {{checked ? 'custom-checkbox--checked' : ''}} {{disabled ? 'custom-checkbox--disabled' : ''}}"
+  catchTap="onChange">
+  <view tiki:if="{{checked}}" class="t-icon">
+    <icon type="success" color="#fff" size="{{16}}" />
+  </view>
+</view>

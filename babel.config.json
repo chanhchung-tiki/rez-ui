@@ -1,0 +1,20 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "loose": true,
+      "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver", {
+        "root": ["./src"],
+        "alias": {
+        "@": "./src"
+        },
+        "extensions": [".js"]
+      }
+    ]
+  ]
+}
