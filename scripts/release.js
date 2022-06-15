@@ -26,7 +26,7 @@ if (
 try {
   execSync('npm run build')
   // Bump up version and add tag
-  // (Require the tree of git clean: all commit must push to remote)
+  // (Require the tree of git clean: not exist files change)
   execSync(
     `npm version ${semanticVersionType} --allow-same-version -m 'Bump up package with version %s'`
   )
