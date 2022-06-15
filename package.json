@@ -1,6 +1,6 @@
 {
   "name": "@tiki-miniapp-rez/tini-ui",
-  "version": "1.0.8",
+  "version": "0.0.1",
   "files": [
     "es"
   ],
@@ -9,12 +9,11 @@
   },
   "scripts": {
     "clean": "rm -rf es",
-    "dev": "npm clean && node scripts/complier.js",
-    "build": "npm clean && NODE_ENV=production node scripts/complier.js",
-    "pub": "npm build && npm publish",
-    "publish-code": "git push origin master:master",
-    "pub:patch": "npm build && npm version patch -m 'Bump up package with version %s' && npm publish && npm run publish-code",
-    "pub:minor": "npm build && npm version minor -m 'Bump up package with version %s' && npm publish && npm run publish-code"
+    "dev": "npm run clean && node scripts/complier.js",
+    "build": "npm run clean && NODE_ENV=production node scripts/complier.js",
+    "pub:patch": "node scripts/release.js --version-type patch",
+    "pub:minor": "node scripts/release.js --version-type minor",
+    "pub:major": "node scripts/release.js --version-type major"
   },
   "author": "chanhchung",
   "license": "MIT",
